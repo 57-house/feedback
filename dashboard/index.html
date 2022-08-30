@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .btn-primary{
+            background-color: #0f5132 !important;
+            border: none;
+            border-radius: 0;
+        }
+
+        .btn{
+            border: none !important;
+            border-radius: 0 !important;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff !important;
+            background-color: #0f5132 !important;
+        }
+
+        .nav-link:focus, .nav-link:hover {
+            color: #69b591 !important;
+        }
+
+        .nav-link{
+            color: #0f5132 !important;
+            font-weight: 600 !important;
+            font-size: 20px !important;
+        }
+
+        .pcolor{
+            color: #0f5132 !important;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="row mx-0 w-100">
+        <div class="alert alert-success w-100 mx-0 shadow-sm">
+            <div class="container-fluid w-100 mx-0 shadow-sm">
+                <div class="row w-100 mx-0 d-flex justify-content-center shadow-sm">
+                    <h3 class="text-center">  <strong>WELCOME TO YOUR DASHBOARD</strong> </h3>
+                </div>
+                <hr class="shadow-sm">
+                <div class="d-flex justify-content-between py-3">
+                    <button class="shadow-sm btn btn-primary px-5 rounded-0 py-2">
+                        <h5> <strong>Settings up your feedback widget</strong> </h5>
+                    </button>
+                    <button class="shadow-sm btn btn-primary px-5 rounded-0 py-2">
+                        <h5> <strong>Checking up your last website feedback</strong> </h5>
+                    </button>
+                    <button class="shadow-sm btn btn-primary px-5 rounded-0 py-2">
+                        <h5> <strong>Go back to the website</strong> </h5>
+                    </button>
+                    <button class="shadow-sm btn btn-primary px-5 rounded-0 py-2">
+                        <h5> <strong>Support</strong> </h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-success bg-transparent border-0">
+            <div class="container-fluid">
+                <div class="d-flex align-items-start justify-content-between">
+                    <div class="nav flex-column nav-pills me-3 w-25 card rounded-0 shadow-sm" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="shadow-sm btn d-flex justify-content-start py-3 nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"> Home </button>
+                        <button class="shadow-sm btn d-flex justify-content-start py-3 nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile </button>
+                        <button class="shadow-sm btn d-flex justify-content-start py-3 nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages </button>
+                        <button class="shadow-sm btn d-flex justify-content-start py-3 nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings </button>
+                    </div>
+                    <div class="tab-content w-75 card ml-2 rounded-0" id="v-pills-tabContent">
+                        <div class="shadow-sm tab-pane fade show active p-4" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <form>
+                                <div class="alert alert-success w-100 mx-0 shadow-sm rounded-0">
+                                    <label for="staticEmail" class="col-sm col-form-label"> <strong>Button configuration : </strong></label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm col-form-label"> <strong>Button configuration : </strong></label>
+                                </div>
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Text Button : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Color Text Button : </label>
+                                    <div class="col-sm-8">
+                                    <input type="color" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Color Button : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm col-form-label"> <strong>Widget configuration : </strong></label>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Background color : </label>
+                                    <div class="col-sm-8">
+                                    <input type="color" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Text color : </label>
+                                    <div class="col-sm-8">
+                                    <input type="color" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">First text : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Second text : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Text Submit Button : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row my-3">
+                                    <label for="inputPassword" class="col-sm-4 col-form-label">Color Submit Button : </label>
+                                    <div class="col-sm-8">
+                                    <input type="password" class="form-control rounded-0 shadow-sm" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row my-3 mx-0 w-100">
+                                    <button class="btn btn-primary"> <strong>Save changes</strong> </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="shadow-sm tab-pane fade p-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                        <div class="shadow-sm tab-pane fade p-4" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                        <div class="shadow-sm tab-pane fade p-4" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://api.57-house.org/js/en/feedback.js"></script>
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

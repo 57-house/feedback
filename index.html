@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section class="showcase">
+        <div class="video-container">
+            <!-- video src="https://traversymedia.com/downloads/video.mov" autoplay muted loop ></video -->
+        </div>
+        <div class="content">
+            <h1>Welcome to the hood of client esperience</h1>
+            <h3>Start getting feedback from your customer and grow your platform as he want!</h3>
+            <button class="btn rounded-0 my-5" data-bs-toggle="modal" data-bs-target="#themeList" id="g-start">Get
+                Started</button>
+            <p style="margin:0">Already have an account ?
+                <a href="https://57-house.org/login" target="blank" class="text-success">Click here</a> to login and
+                customize the feedback widget in your website.
+            </p>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="https://api.57-house.org/js/en/feedback.js"></script>
+
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="themeList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="themeListLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="themeListLabel"> <strong> Start collecting feedback on your website in 3
+                        steps : </strong> </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <nav class="fSteps">
+                    <button class="fSteps__step fSteps__step--active btn-step0 bg-transparent border-0">
+                        <span class="fSteps__status">
+                            <span class="fSteps__status-text">1</span>
+                        </span>
+
+                        <h4 class="fSteps__title">Set language</h4>
+                    </button>
+
+                    <hr class="fSteps__line" />
+
+
+                    <button class="fSteps__step fSteps__step--text btn-step1 bg-transparent border-0">
+                        <span class="fSteps__status">
+                            <span class="fSteps__status-text">2</span>
+                        </span>
+
+                        <h4 class="fSteps__title">Add domain</h4>
+                    </button>
+
+                    <hr class="fSteps__line" />
+
+
+                    <button class="fSteps__step fSteps__step--text btn-step2 bg-transparent border-0">
+                        <span class="fSteps__status">
+                            <span class="fSteps__status-text">3</span>
+                        </span>
+
+                        <h4 class="fSteps__title">Copy and paste code</h4>
+                    </button>
+
+                    <hr class="fSteps__line" />
+
+
+                    <button class="fSteps__step fSteps__step--text btn-step3 bg-transparent border-0">
+                        <span class="fSteps__status">
+                            <span class="fSteps__status-text">4</span>
+                        </span>
+
+                        <h4 class="fSteps__title">Add email</h4>
+                    </button>
+
+                    <hr class="fSteps__line" />
+
+                </nav>
+                <hr class="fSteps__line my-3 mx-0px-0" />
+
+                <div id="step-body">
+
+                    <div class="row mt-3 d-flex align-items-center" id="step0">
+                        <div class="col-sm-6">
+                            <div class="alert p-4">
+                                1. Select the language : <br><br>
+                                <select class="w-100 py-1 px-3 rounded-0" id="language"></select>
+                                <button type="button" class="btn btn-secondary rounded-0 btn-step1"> Next &#8594;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="w-100"
+                                src="https://prod.smassets.net/assets/website/2.181.0/images/signup-flow-form.png"
+                                alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3 d-flex align-items-center d-none" id="step1">
+                        <div class="col-sm-6">
+                            <img class="w-100"
+                                src="https://prod.smassets.net/assets/website/2.181.0/images/signup-flow-form.png"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="alert p-4">
+                                1. Enter your website domain here : <br><br>
+                                <div class="input-group w-100">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">https://</div>
+                                    </div>
+                                    <input type="text" class="py-1 px-3 form-control" id="domain"
+                                        placeholder="Ex: api.57-house.org">
+                                </div>
+                                <button type="button" class="btn btn-secondary rounded-0 btn-step2"> Next &#8594;
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mt-3 d-flex align-items-center d-none" id="step2">
+                        <div class="col-sm-6">
+                            <div class="alert p-4">
+                                1. Edit the source file of your Code <br><br>
+                                2. Find the balise " < / body> " <br><br>
+                                    3. Insert this code snippet directly after the closing < / body > tag on each page you want the "Feedback" widget to appear : <br><br>
+                                        <textarea name="" cols="30" class="w-100 py-1 px-3" rows="10" id="script"
+                                            disabled></textarea>
+                                        <button type="button" class="btn btn-secondary rounded-0 btn-step3"> Next
+                                            &#8594; </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="w-100"
+                                src="https://prod.smassets.net/assets/website/2.181.0/images/signup-flow-form.png"
+                                alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3 d-flex align-items-center d-none" id="step3">
+                        <div class="col-sm-6">
+                            <img class="w-100"
+                                src="https://prod.smassets.net/assets/website/2.181.0/images/signup-flow-form.png"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="alert p-4">
+                                1. Enter the feedback recipient email : <br><br>
+                                <input type="email" class="w-100 py-1 px-3" id="email"
+                                    placeholder="Ex: support@57-house.org">
+                                <div class="form-check mt-3 d-none" id="create_account_div">
+                                    <input class="form-check-input" type="checkbox" value="1" id="create_account">
+                                    <label class="form-check-label" for="create_account">
+                                        Create an account automatically
+                                    </label>
+                                </div>
+
+                                <div id="block-pass" class="block-pass d-none mt-3">
+                                    <div class="input-group w-100">
+                                    <input type="password" class="py-1 px-3 w-75" id="password"
+                                    placeholder="Enter your password">
+                                    <div class="input-group-prepend">
+                                        <button class="input-group-text" data-id="&#x1F441;" id="see_pass">&#x1F441;</button>
+                                    </div>
+                                </div>
+                                <small class="text-danger d-none" id="password_alert">Please add minimum 8
+                                    characters.</small>
+                                </div>
+
+                                <button type="button" id="send" class="btn btn-secondary rounded-0" disabled> Send
+                                    &#8594;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 d-flex align-items-center d-none" id="done">
+                        <div class="col-sm ">
+                            <div class="alert p-4 d-flex align-items-center justify-content-center">
+                                <svg width="40px" height="40px" viewBox="0 0 133 133" version="1.1">
+                                    <g id="check-group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <circle id="filled-circle" fill="#07b481" cx="66.5" cy="66.5" r="54.5" />
+                                        <circle id="white-circle" fill="#FFFFFF" cx="66.5" cy="66.5" r="55.5"
+                                            style="transform-origin: center;  transform: scale(0);" />
+                                        <circle id="outline" stroke="#07b481" stroke-width="4" cx="66.5" cy="66.5"
+                                            r="54.5"
+                                            style="animation: 0.38s ease-in outline; transform-origin: center;" />
+                                        <polyline id="check" stroke="#FFFFFF" stroke-width="5.5"
+                                            points="41 70 56 85 92 49" />
+                                    </g>
+                                </svg>
+                                <p style="margin:0">Thank you for trusting our service.
+                                    <a href="https://57-house.org/login" target="blank">Click here</a> to login and
+                                    customize the feedback widget in your website.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close x</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        getConfig();
+
+
+
+        const div0 = document.querySelector("#step0");
+
+        const div1 = document.querySelector("#step1");
+
+        const div2 = document.querySelector("#step2");
+
+        const div3 = document.querySelector("#step3");
+
+        const done = document.querySelector("#done");
+
+        let xhrEmail = new XMLHttpRequest();
+
+
+        for (const item of document.querySelectorAll(".btn-step0")) {
+            item.onclick = function () {
+
+                if (checkValue(document.querySelector("#language"))) {
+
+                    document.querySelector(".btn-step0").classList.remove("fSteps__step--text")
+                    document.querySelector(".btn-step1").classList.add("fSteps__step--active")
+
+                    done.classList.add("d-none")
+                    div1.classList.add("d-none")
+                    div2.classList.add("d-none")
+                    div3.classList.add("d-none")
+                    div0.classList.remove("d-none")
+
+                    majData()
+                }
+            }
+        }
+
+        for (const item of document.querySelectorAll(".btn-step1")) {
+            item.onclick = function () {
+
+                if (checkValue(document.querySelector("#language"))) {
+
+                    document.querySelector(".btn-step0").classList.remove("fSteps__step--text")
+                    document.querySelector(".btn-step1").classList.add("fSteps__step--active")
+
+                    done.classList.add("d-none")
+                    div1.classList.remove("d-none")
+                    div2.classList.add("d-none")
+                    div3.classList.add("d-none")
+                    div0.classList.add("d-none")
+
+                    majData()
+                }
+            }
+        }
+
+        for (const item of document.querySelectorAll(".btn-step2")) {
+            item.onclick = function () {
+                if(checkValue(document.querySelector("#domain"))) {
+                    checkWebsite(document.querySelector("#domain").value, (result) => {
+                        if(result){
+                            this.classList.remove("fSteps__step--text")
+                            this.classList.add("fSteps__step--active")
+    
+    
+                            done.classList.add("d-none")
+                            div1.classList.add("d-none")
+                            div2.classList.remove("d-none")
+                            div3.classList.add("d-none")
+                            div0.classList.add("d-none")
+    
+                            majData()
+                        }
+                    })
+
+                }
+
+
+            }
+        }
+
+
+        for (const item of document.querySelectorAll(".btn-step3")) {
+            item.onclick = function () {
+                if(checkValue(document.querySelector("#domain"))) {
+                    this.classList.add("fSteps__step--active")
+                    this.classList.remove("fSteps__step--text")
+                    div1.classList.add("d-none")
+                    div2.classList.add("d-none")
+                    div3.classList.remove("d-none")
+                    div0.classList.add("d-none")
+                    done.classList.add("d-none")
+
+                    checkingMail()
+                    majData()
+                }
+
+
+            }
+        }
+
+        document.querySelector("#g-start").click()
+
+        document.querySelector("#send").onclick = () => {
+            if (checkDataBeforeSubmit()) {
+                majData()
+                data = "langue="+sessionStorage.getItem("langue")+
+                "&token="+sessionStorage.getItem("tokenKey")+
+                "&website="+sessionStorage.getItem("domain")+
+                "&email="+sessionStorage.getItem("email")+
+                "&create_account="+sessionStorage.getItem("create_account")+
+                "&password="+sessionStorage.getItem("password")
+
+                sendData(data, () => {
+                    div3.classList.add("d-none")
+                    document.querySelector("#done").classList.remove("d-none")
+                })
+            }
+        }
+
+        document.querySelector("#email").addEventListener("keyup", function () {
+            checkingMail()
+        });
+
+        document.querySelector("#email").addEventListener("change", function () {
+            checkingMail()
+        });
+
+        document.querySelector("#see_pass").addEventListener("click", function () {
+            console.log(document.querySelector("#see_pass").textContent)
+            if(document.querySelector("#see_pass").dataset.id == "&#x1F441;"){
+                document.querySelector("#see_pass").innerHTML = "&#128274;"
+                document.querySelector("#see_pass").dataset.id = "&#128274;"
+                document.querySelector("#password").type = "password"
+            }else{
+                document.querySelector("#see_pass").innerHTML = "&#x1F441;"
+                document.querySelector("#see_pass").dataset.id = "&#x1F441;"
+                document.querySelector("#password").type = "text"
+            }
+        })
+
+        checkingMail = () => {
+            document.querySelector("#create_account_div").classList.add("d-none")
+            document.querySelector("#block-pass").classList.add("d-none")
+            if (validateEmail(document.querySelector("#email").value)) {
+                document.querySelector("#send").disabled = false
+                xhrEmail.abort();
+                xhrEmail.open("POST", "https://demo.57-house.org/api/feedback-checkUser");
+                xhrEmail.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhrEmail.onload = (result) => {
+                    document.querySelector("#create_account").checked = false
+                    document.querySelector("#password").value = ""
+                    document.querySelector("#block-pass").classList.add("d-none")
+                    if (JSON.parse(result.target.response).data.length > 0) {
+                        document.querySelector("#create_account_div").classList.add("d-none")
+                        document.querySelector("#block-pass").classList.add("d-none")
+                    } else {
+                        document.querySelector("#create_account_div").classList.remove("d-none")
+                    }
+                }
+                xhrEmail.send(`email=${document.querySelector("#email").value}`);
+            } else {
+                document.querySelector("#send").disabled = true
+            }
+        }
+
+        document.querySelector("#password").addEventListener("keyup", function () {
+            if (document.querySelector("#password").value.length < 8) {
+                document.querySelector("#password_alert").classList.remove("d-none")
+            } else {
+                document.querySelector("#password_alert").classList.add("d-none")
+            }
+        });
+
+    })
+
+
+    function sendData(data,callback){
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://demo.57-house.org/api/feedback-inscription");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = (result) => {
+            console.log(result)
+            clearStorage()
+            callback()
+        }
+        xhr.send(data);
+
+    }
+
+    function clearStorage(){
+        sessionStorage.removeItem("langue")
+        sessionStorage.removeItem("tokenKey")
+        sessionStorage.removeItem("domain")
+        sessionStorage.removeItem("email")
+        sessionStorage.removeItem("create_account")
+        sessionStorage.removeItem("password")
+    }
+
+    function checkDataBeforeSubmit() {
+
+
+        if (!checkStorage(sessionStorage.getItem("langue"), "Invalid langue value")) { return false }
+
+        if (!checkStorage(sessionStorage.getItem("domain"), "Invalid domain value")) { return false }
+
+        checkWebsite(sessionStorage.getItem("domain"), (statusResult) => {
+
+            if (statusResult) {
+
+                if (!validateEmail(sessionStorage.getItem("email"))) {
+
+                    if (!checkStorage("", "Invalid Email value")) { return false }
+
+                } else {
+
+                    if (sessionStorage.getItem("create_account").checked) {
+
+                        if (!checkStorage(sessionStorage.getItem("password"), "Invalid password value")) { return false }
+
+                    }
+
+
+                }
+            }
+
+            return false
+
+        })
+
+        return true
+
+    }
+
+    function checkStorage(value, message) {
+        if (!(value !== "" && value !== null && value !== undefined)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops... Missing field',
+                text: message,
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            return false
+        }
+        return true
+    }
+
+    function checkValue(value, message) {
+        if ((value !== "" && value !== null && value !== undefined) &&
+            (value.value !== "" && value.value !== null && value.value !== undefined)) {
+            return true
+        } else {
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops... Missing field',
+                text: message,
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            return false
+        }
+    }
+
+    function majData() {
+
+        
+
+        sessionStorage.setItem("langue", document.querySelector("#language").value)
+        sessionStorage.setItem("domain", document.querySelector("#domain").value)
+        sessionStorage.setItem("email", document.querySelector("#email").value)
+        sessionStorage.setItem("create_account", document.querySelector("#create_account").value)
+        sessionStorage.setItem("password", document.querySelector("#password").value)
+
+        document.querySelector("#script").innerHTML = sessionStorage.getItem(`${document.querySelector("#language").value}`)
+
+        document.querySelector("#create_account").onclick = () => {
+            if (document.querySelector("#create_account").checked == true) {
+                document.querySelector("#block-pass").classList.remove("d-none")
+            } else {
+                document.querySelector("#block-pass").classList.add("d-none")
+            }
+        }
+    }
+
+    function getConfig() {
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://demo.57-house.org/api/feedback-config");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = (result) => {
+            const config = (JSON.parse(result.target.response).data).forEach((item, index, arr) => {
+                document.querySelector("#language").innerHTML += `<option value="${item.code}">${item.langue}</option>`
+                item.script = '<script src="https://' + item.script +getToken() + '"></' + 'script' + '>' 
+                sessionStorage.setItem(`${item.code}`, item.script)
+            });
+
+            getToken()
+        }
+        xhr.send();
+    }
+
+
+    function checkWebsite(data, callback) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://demo.57-house.org/api/feedback-checkWebsite");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = (result) => {
+            if (JSON.parse(result.target.response).data) {
+                callback(true)
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops... Invalid domain!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                callback(false)
+            }
+        }
+        xhr.send(`website=${data}`);
+    }
+
+
+    function checkUser(data, callback) {
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://demo.57-house.org/api/feedback-checkUser");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = (result) => {
+            const config = (JSON.parse(result.target.response).data).forEach((item, index, arr) => {
+                document.querySelector("#language").innerHTML += `<option value="${item.code}">${item.langue}</option>`
+                sessionStorage.setItem(`${item.code}`, item.script)
+            })
+        }
+        xhr.send(`email=${data}`);
+    }
+
+
+    const validateEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
+
+    const getToken = () => {
+        token = ""
+        for(let i=0; i < 13; i++){
+            token += Math.random().toString(36).substr(2);
+        }
+        if(sessionStorage.getItem("tokenKey") == undefined){
+            sessionStorage.setItem("tokenKey", token)
+        }
+        return sessionStorage.getItem("tokenKey") ;
+    }
+
+
+    const svg_load = `<svg version="1.1" id="loader-1"  x="0px" y="0px"
+      width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+      <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+          s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+          c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+          C22.32,8.481,24.301,9.057,26.013,10.047z">
+          <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="0.5s"
+          repeatCount="indefinite"/>
+          </path>
+      </svg>`
+</script>

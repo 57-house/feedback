@@ -20,6 +20,9 @@
         </div>
 
         <div class="content">
+            <div class="d-flex-justify-content-center">
+                <img src="/img/logo.png" style="width:20%" alt="Feedback logo">
+            </div>
             <h1>Welcome to the hood of client esperience</h1>
             
             <h3>Start getting feedback from your customer and grow your platform as he want!</h3>
@@ -245,6 +248,13 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
+        if(sessionStorage.getItem("cinqSeptToken") == undefined ){
+            document.querySelector("#g-start").removeAttribute("data-bs-toggle")
+            document.querySelector("#g-start").onclick = () => {
+                location.href  = "https://auth.57-house.org/login?redirect_uri=http://127.0.0.1:5501/dashboard/"
+            }
+        }
+
         getConfig();
 
         const div0 = document.querySelector("#step0");
@@ -343,7 +353,6 @@
             }
         }
 
-        // document.querySelector("#g-start").click()
 
         document.querySelector("#send").onclick = () => {
             if (checkDataBeforeSubmit()) {
@@ -622,4 +631,3 @@
           </path>
       </svg>`
 </script>
-<script src="../js/dashboard.js"></script>

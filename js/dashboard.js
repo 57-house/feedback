@@ -1,27 +1,27 @@
 const host = "https://demo.57-house.org"
 window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("token") == null) {
+    if (urlParams.get("token") !== null) {
         sessionStorage.setItem("cinqSeptToken",urlParams.get("token"))
     } 
-    let xhr = new XMLHttpRequest();
-    getSitesList(xhr)
+    getSitesList()
 }
 
 
-function getSitesList(xhr) {
-    xmlRequest(xhr, `https://www.demo.57-house.org/api/feedback-get-user-websites`, "", "GET", (result) => {
+function getSitesList() {
+    xmlRequest(`${host}/api/feedback-get-user-websites`, "", "GET", (result) => {
         console.log(result)
     })
 }
 
 
 
-function xmlRequest(xhr, url, data, method, callback) {
+function xmlRequest(url, data, method, callback) {
+    let xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
-    xhr.setRequestHeader('Authorization', 'bearer db6f0bedfc27500a2dde42bb15ffd9564c2da8bfe36b909ee867bebd1ba819f5');
+    xhr.setRequestHeader('Authorization', 'Bearer '+ sessionStorage.getItem("cinqSeptToken"));
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader('accept', 'bearer application/json');
+    xhr.setRequestHeader('accept', 'application/json');
     xhr.onload = (result) => {
         callback(result)
     }

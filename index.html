@@ -21,7 +21,8 @@
 
         <div class="content">
             <div class="d-flex-justify-content-center">
-                <img src="/img/logo.png" style="width:20%" alt="Feedback logo">
+                <img id="logo" src="/img/logo.png" style="width:20%" alt="Feedback logo">
+                <img id="auth-logo" src="/img/auth-logo.png" class="d-none" style="width:20%" alt="Feedback logo">
             </div>
             <h1>Welcome to the hood of client esperience</h1>
             
@@ -32,7 +33,7 @@
             </button>
             
             <p style="margin:0">Already have an account ?
-                <a href="https://auth.57-house.org/login?redirect_uri=http://127.0.0.1:5501/dashboard/" class="text-success">Click here</a> to login and
+                <a href="http://127.0.0.1:8000/login?redirect_uri=http://127.0.0.1:5501/dashboard/" class="text-success">Click here</a> to login and
                 customize the feedback widget in your website.
             </p>
         
@@ -248,10 +249,13 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
+        var src = document.querySelector("#auth-logo").src;
+        auth_host = "http://127.0.0.1:8000" //https://auth.57-house.org
+
         if(sessionStorage.getItem("cinqSeptToken") == undefined ){
             document.querySelector("#g-start").removeAttribute("data-bs-toggle")
             document.querySelector("#g-start").onclick = () => {
-                location.href  = "https://auth.57-house.org/login?redirect_uri=http://127.0.0.1:5501/dashboard/"
+                location.href  = `${auth_host}/login?redirect_uri=http://127.0.0.1:5501/dashboard/&logo=${src}`
             }
         }
 
